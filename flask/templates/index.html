@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CFB101</title>
+    <style type="test/css">
+        .pagination {text-align: center;}
+    </style>
+</head>
+<body>
+{% extends "bootstrap/base.html" %}
+{% block CFB101 %} {% endblock %}
+
+{% block navbar %}
+<div class="navbar navbar-fixed-top">
+    {%include 'navbar.html' %}
+    <div>
+        <iframe width="1024" height="400" src="https://app.powerbi.com/view?r=eyJrIjoiNWQ2Njk4YWUtOWIxOS00MzFkLTk2MjktODYyNTlkMzRkYzExIiwidCI6Ijc4ZTE0YmExLWQ4OWItNGVkNy04NTMxLWE4NDg2OTIxNmE5NCJ9&pageName=ReportSection" frameborder="0" allowFullScreen="true"></iframe>
+    </div>
+</div>
+{% endblock %}
+</body>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CFB101</title>
+    <style type="test/css">
+    .pagination-page-link {
+      display: inline-block;
+    }
+
+    .pagination-page-link a {
+      color: black;
+      float: left;
+      padding: 8px 16px;
+      text-decoration: none;
+    }
+        .pagination-page-link a.active {
+        background-color: #4CAF50;
+        color: white;
+    }
+        .pagination a:hover:not(.active) {background-color: #ddd;}
+    </style>
+</head>
+<body>
+
+{% extends "bootstrap/base.html" %}
+{% block CFB101 %}news page{% endblock %}
+
+<div class="navbar navbar-fixed-top">
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}
+
+    {% block content %}
+    <div class="bs-example" data-example-id="default-navbar">
+    <div>
+        <center>
+            <img src="{{url_for('static', filename='word_cloud.png')}}"/>
+        </center>
+    </div>
+         <div class="panel-body">
+                <div class="table-responsive">
+
+                    <table class="table table-striped table-bordered table-hover">
+                        <thead>
+                            <th>Date</th>
+                            <th>Title</th>
+                        </thead>
+                        <tbody>
+                            {% for n in posts %}
+                                <tr>
+                                    <td> {{ n['date'] }}</td>
+                                    <td> <a href="{{ n['link'] }}" title="{{ n['title'] }}">{{ n['title'] }}</a></td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+        </div>
+    </div>
+    <div>
+         <nav aria-label="Page navigation">
+            <center>
+                <ul class="pagination">
+                    <li>
+                         {{ pagination.links }}
+                    </li>
+                 </ul>
+            </center>
+         </nav>
+    </div>
+
+    {% endblock %}
+
+</div>
+</body>
+</html>
+
