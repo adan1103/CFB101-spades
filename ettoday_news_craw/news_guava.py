@@ -110,7 +110,7 @@ df_guava_news = df_news_craw[(news_type1 | news_type2 | news_type3 | news_type4 
 
 
 
-client = pymongo.MongoClient("mongodb+srv://vicar1987:1ul3u03nji3@twfruit.i2omj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@<project_name>.i2omj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client.TWFruits
 ettoday_news = db.ettoday_news_craw
 
