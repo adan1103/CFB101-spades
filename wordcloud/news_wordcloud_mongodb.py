@@ -19,7 +19,7 @@ from scipy.ndimage import gaussian_gradient_magnitude
 # In[2]:
 
 
-client = pymongo.MongoClient("mongodb+srv://vicar1987:1ul3u03nji3@twfruit.i2omj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
+client = pymongo.MongoClient("mongodb+srv://<username>:<password>@<projectname>.i2omj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority")
 db = client.TWFruits # connect database TWFruits
 
 
