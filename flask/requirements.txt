@@ -1,0 +1,6 @@
+flask
+pymongo==3.11.4
+Flask-Bootstrap==3.3.7.1
+flask-paginate==0.8.1
+Flask-PyMongo==2.3.0
+waitress
