@@ -6,8 +6,8 @@ from flask_paginate import Pagination, get_page_parameter
 from waitress import serve
 
 # mongodb連線 (mongodb需增加ip才看得到)
-mongodb_atlas_account = "adan7575"
-mongodb_atlas_password = "adan7575"
+mongodb_atlas_account = "account"
+mongodb_atlas_password = "password"
 client = MongoClient('mongodb+srv://{}:{}@twfruit.i2omj.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'.format(mongodb_atlas_account, mongodb_atlas_password))
 db = client.TWFruits
 
